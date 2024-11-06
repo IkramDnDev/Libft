@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:28:46 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:56:33 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:42:02 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,4 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
         lst = lst->next;
    }
    return (new_list);   
-} 
+}

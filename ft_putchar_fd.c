@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:34 by idahhan           #+#    #+#             */
-/*   Updated: 2024/10/31 21:48:57 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/01 18:41:16 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_putchar_fd(char c, int fd)
 
 // int main()
 // {
+// 	int fd;
 
 //      int fd =  open("hello.txt", O_WRONLY | O_CREAT, 0644);
 //     if (fd == -1) 
@@ -27,6 +28,6 @@ void	ft_putchar_fd(char c, int fd)
 //         return 1; 
 //     }
 
-//     ft_putchar_fd('m', fd);
+//     ft_putchar_fd('m', 2);
 //     close(fd);
 // }

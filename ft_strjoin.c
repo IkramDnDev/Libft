@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:21 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:55:18 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 15:16:22 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,29 @@ char *ft_strjoin(char const *s1, char const *s2)
     size_t  total_len;
     int     i;
     int     j;
-    char    *totat_str;
+    char    *total_str;
     
-    total_len = ft_strlen(s1) + ft_strlen(s2);
-    i = 0;
-    j = 0;
-    totat_str = malloc(total_len + 1);
     if (!s1 || !s2)
         return (0);
+    total_len = ft_strlen(s1) + ft_strlen(s2);
+    total_str = (char *)malloc(total_len + 1);
+    if (!total_str)
+        return (NULL);
+    i = 0;
     while (s1[i])
     {
-        totat_str[i] = s1[i] ;
+        total_str[i] = s1[i] ;
         i++;
     }
+    j = 0;
     while (s2[j])
     {
-        totat_str[i + j] = s2[j];
+        total_str[i + j] = s2[j];
         j++;
     }
-    totat_str[i + j] = '\0';
+    total_str[i + j] = '\0';
 
-    return (totat_str);
+    return (total_str);
 }
 // int main()
 // {

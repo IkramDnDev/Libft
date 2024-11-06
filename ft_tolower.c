@@ -6,13 +6,13 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:32:23 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:54:24 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 12:29:40 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(char c)
+int ft_tolower(int c)
 {
     if (c >= 65 && c <= 90)
         c += 32;

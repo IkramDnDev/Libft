@@ -19,19 +19,18 @@ char modify_char(unsigned int index, char c) {
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    if (!s || !f)
-        return NULL;
-
     unsigned int len;
     char *new_str;
     unsigned int i;
-    
+
     len = 0;
     i = 0;
-    new_str = (char *)malloc((len + 1) * sizeof(char));
+    if (!s || !f)
+        return NULL;
     while (s[len])
         len++;
-    while (!new_str)
+    new_str = (char *)malloc((len + 1) * sizeof(char));
+    if (!new_str)
         return (NULL);
     while (i < len)
     {
@@ -52,4 +51,3 @@ int main() {
     }
     return 0;
 }*/
-

@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:00 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:06:51 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 18:07:09 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,19 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	while ((char)c != *s)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
+		if (!*s)
+			return (0);
 		s++;
 	}
-	if (c == '\0')
-	{
-		return ((char *)s);
-	}
-	return (NULL);
+	return ((char *)s);
 }
+// int main ()
+// {
+// 	char str[] = "ikram";
+// 	char c = '\0';
+
+// 	printf("%s", strchr(str, c));
+// 	printf("%s", ft_strchr(str, c));
+// }

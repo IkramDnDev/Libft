@@ -6,17 +6,19 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:19 by idahhan           #+#    #+#             */
-/*   Updated: 2024/10/31 21:39:39 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:20:03 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	d = (unsigned char *) dest;
 	s = (unsigned char *) src;
 	if (d > s)

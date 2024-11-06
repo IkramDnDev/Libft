@@ -16,15 +16,17 @@ OBJS_BONUS = $(BSRCS:.c=.o)
 
 TEST = test_program
 
+HEADER = libft.h
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+	ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
 
-%.o: %.c
+%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 test: $(NAME)
@@ -39,3 +41,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

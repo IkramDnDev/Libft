@@ -6,13 +6,13 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:07 by idahhan           #+#    #+#             */
-/*   Updated: 2024/10/31 21:45:56 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:23:30 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(void *ptr1, void *ptr2, size_t n)
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 {
 	unsigned char	*p1;
 	unsigned char	*p2;

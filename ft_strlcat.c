@@ -6,15 +6,15 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:33 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:55:14 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:36:34 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int ft_strlcat(char *dest, const char *src, unsigned int size)
 {
-    char            *s;
+    const char      *s;
     char            *d;
     unsigned int    n;
     int         dest_len;

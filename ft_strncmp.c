@@ -6,16 +6,16 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:31:50 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 11:38:39 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:56:34 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(char *str1, char *str2,int n)
+int ft_strncmp(const char *str1, const char *str2,int n)
 {
-    if (n <= 0)
-        return (0);
+    if (n < 0)
+        return (-1);
     while (*str1 && *str2 && n > 0)
     {
         if (*str1 != *str2)
@@ -30,8 +30,9 @@ int ft_strncmp(char *str1, char *str2,int n)
 }
 // int main()
 // {
-//     char *str1 = "test\200";
-//     char *str2 = "test\0";
+//     char *str1 = "1234";
+//     char *str2 = "1235";
 
-//     printf("%d", ft_strncmp(str1, str2, 6));
+//     printf("%d\n", ft_strncmp(str1, str2, -1));
+//     printf("%d", strncmp(str1, str2, -1));
 // }

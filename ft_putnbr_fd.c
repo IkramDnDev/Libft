@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:45 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 14:37:50 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/03 16:58:20 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ void ft_putnbr_fd(int n, int fd)
         }
     }
 }
-
 // int main()
 // {
 //     int fd = open("ikram.txt", O_WRONLY, 0644);

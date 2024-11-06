@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:32:17 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:53:59 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:49:44 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
     i = 0;
     s_len = ft_strlen(s);
-    c = (char *)malloc((len + 1)* sizeof(char));
     if(!s)
         return (0);
     if(start >= s_len)
         return (ft_strdup(""));
-    
     if(len > s_len - start)
         len = s_len - start;
+    c = (char *)malloc((len + 1)* sizeof(char));
     if(!c)
         return (0);
     while(i < len)

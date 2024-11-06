@@ -6,21 +6,21 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:12 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:03:32 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:33:27 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	char	*d;
+	const char	*s;
 
-	if (n == 0 || src == dest)
-		return (dest);
-	if (!src)
+	if (dest == NULL && src == NULL)
 		return (NULL);
+	if (src == dest)
+		return (dest);
 	d = dest;
 	s = src;
 	while (n-- > 0)
@@ -32,13 +32,12 @@ void	*ft_memcpy(void *dest, void *src, size_t n)
 // int main()
 // {
 //     int dest[6];
-//     int src[] = {1, 2, 3};
-//     size_t n = sizeof(src);
-//     ft_memcpy(dest, src, n);
+//     int src[] = {-128, 2, 3};
+//     ft_memcpy(dest, src, sizeof(src));
 //     size_t i = 0;
-//     while (i < sizeof(src) / sizeof(src[0]))
+//     while (i < 3)
 //     {
-//         printf("%d ", dest[i]);
+//         printf("%d\n", dest[i]);
 //         i++;
 //     }
 // }

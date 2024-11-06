@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:28:00 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:56:54 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:41:56 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
     }
     *lst = NULL; 
 }
-int main()
-{
-    t_list *head = ft_lstnew(malloc(sizeof(int)));
-    t_list *second = ft_lstnew(malloc(sizeof(int)));
-    ft_lstadd_back(&head, second);
+// int main()
+// {
+//     t_list *head = ft_lstnew(malloc(sizeof(int)));
+//     t_list *second = ft_lstnew(malloc(sizeof(int)));
+//     ft_lstadd_back(&head, second);
 
-    ft_lstclear(&head, del);
-    return 0;
-}
+//     ft_lstclear(&head, del);
+//     return 0;
+// }

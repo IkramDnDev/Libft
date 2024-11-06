@@ -6,15 +6,15 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:45 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:55:08 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/06 16:36:47 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dest, char *src, size_t size)
+size_t ft_strlcpy(char *dest, const char *src, size_t size)
 {
-    char *s;
+    const char *s;
     size_t src_len;
     size_t i;
 
@@ -39,9 +39,10 @@ size_t ft_strlcpy(char *dest, char *src, size_t size)
 // int main()
 // {
 //     char *src = "ikram";
-//     char dest[4];
+//     char dest[2];
 //     size_t size = 0;
 
-//     printf("%zu\n", ft_strlcpy(dest, src, size));
+//     printf("%zu\n", ft_strlcpy(dest, src, 6));
+//     // printf("%zu\n", strlcpy(dest, src, 6));
 //     printf("%s", dest);
 // }

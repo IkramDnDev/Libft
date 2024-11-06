@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:07 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/01 15:55:36 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/02 14:41:54 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ char	*ft_strdup(char *src)
 	size_t  len;
 	char    *ptr;
     
-    copy = (char *)malloc((len + 1) * sizeof(char));
-    ptr = copy;
     len = ft_strlen(src);
-
+    copy = (char *)malloc((len + 1) * sizeof(char));
+    if (!copy)
+        return (NULL);
+    ptr = copy;
     if	(copy == NULL)
         return NULL;
     while(*src)
@@ -33,6 +34,6 @@ char	*ft_strdup(char *src)
 }
 // int main ()                                                                                                           
 // {
-//     char src[20] = "ikramabcderfgh";
-//     // printf("%s", ft_strdup(src));
+//     char *src = "ikramabcderfgh";
+//     printf("%s", ft_strdup(src));
 // }
