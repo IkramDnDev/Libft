@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:05:22 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 21:59:26 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/07 22:06:41 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (res < LONG_MAX - (str[i] - '0') / 10)
+		if (res > LONG_MAX - (str[i] - '0') / 10)
 			return (ft_overflow(sign));
 		res = res * 10 + (str[i] - '0');
 		i++;
