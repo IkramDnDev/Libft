@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:27:48 by idahhan           #+#    #+#             */
-/*   Updated: 2024/10/31 18:27:48 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/07 21:18:24 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back_bonus(t_list **alst, t_list *new)
- {
-    if (*alst == NULL)
-    {
-        *alst = new;
-    }else
-    {
-        t_list *current = *alst;
-        while (current->next != NULL)
-        {
-           current =current->next;
-        }
+void	ft_lstadd_back(t_list **alst, t_list *new)
+{
+	t_list	*current;
 
-        current->next = new;
-    }
+	if (*alst == NULL)
+	{
+		*alst = new;
+	}
+	else
+	{
+		current = *alst;
+		while (current -> next != NULL)
+		{
+			current = current -> next;
+		}
+		current -> next = new;
+	}
 }
 /*
 int main() {
@@ -40,7 +42,7 @@ int main() {
     // Parcourir et afficher la liste
     t_list *current = head;
     while (current != NULL) {
-        printf("%s\n", (char *)current->content); // Affiche le contenu de chaque élément
+        printf("%s\n", (char *)current->content);
         current = current->next; // Avance au prochain élément
     }
     // Libération de la mémoire

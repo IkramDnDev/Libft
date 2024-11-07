@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:27:53 by idahhan           #+#    #+#             */
-/*   Updated: 2024/10/31 18:27:53 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/07 21:41:01 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front_bonus(t_list **alst, t_list *new)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-    if(alst == NULL || new == NULL)
-        return;
-    
-    new->next = *alst;
-    *alst = new;
+	if (alst == NULL || new == NULL)
+		return ;
+	new -> next = *alst;
+	*alst = new;
 }
 /*
 int main()

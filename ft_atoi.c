@@ -6,17 +6,24 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:05:22 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/03 11:20:51 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/07 21:59:26 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_overflow(int sign)
+{
+	if (sign == 1)
+		return (-1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	res;
-	int	sign;
-	int	i;
+	long	res;
+	int		sign;
+	int		i;
 
 	res = 0;
 	sign = 1;
@@ -32,15 +39,17 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (res < LONG_MAX - (str[i] - '0') / 10)
+			return (ft_overflow(sign));
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
 	return (res * sign);
 }
 // int main()
-// {
-//     printf("%d\n", ft_atoi("-9223372036854775810"));
-//     printf("%d\n", atoi("-9223372036854775810"));
+// {            
+//     printf("%d\n", ft_atoi("21474836489999999999999999999"));
+//     printf("%d\n", atoi("214748364899999999999999999999"));
 //     // printf("%d\n", ft_atoi("   -123"));
 //     // printf("%d\n", ft_atoi("+42"));
 //     // printf("%d\n", ft_atoi("   +0"));

@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:27:05 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/02 12:47:11 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/07 17:33:52 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ void	*ft_calloc(size_t count, size_t size)
 // int main()
 // {
 //     int *ptr;
-//     ptr = ft_calloc(-5, sizeof(int));
+//     // ptr = ft_calloc(3, sizeof(int));
+// 	ptr = calloc(3, sizeof(int));
 
 //     int i = 0;
-//     while(i < 5 && ptr)
+//     while(i < 3 && ptr)
 //     {
 //         printf("%d ", ptr[i]);
 //         i++;
