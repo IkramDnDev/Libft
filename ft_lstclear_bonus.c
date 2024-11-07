@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-void del(void *content)
-{
-    free(content); 
-}
+//void del(void *content)
+//{
+//    free(content); 
+//}
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void ft_lstclear_bonus(t_list **lst, void (*del)(void *))
 {
     t_list *current;
     t_list *next;
