@@ -49,5 +49,4 @@ void	ft_putnbr_fd(int n, int fd)
 //     int fd = open("ikram.txt", O_WRONLY, 0644);
 //     ft_putnbr_fd(-123456688, fd);
 //     close(fd);
-
 // }

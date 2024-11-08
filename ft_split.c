@@ -33,18 +33,16 @@ static int	count_word(const char *s, char c)
 	return (count);
 }
 
-static char	*copy_word(const char *start, size_t len)
+static char	*copy_word(const char *s, int start, int len)
 {
-	char	*word;
-	size_t	i;
+	char	*word = (char *)malloc((len + 1) * sizeof(char));
+	int		i = 0;
 
-	word = (char *)malloc((len + 1) * sizeof(char));
-	i = 0;
 	if (!word)
 		return (NULL);
 	while (i < len)
 	{
-		word[i] = start[i];
+		word[i] = s[start + i];
 		i++;
 	}
 	word[i] = '\0';
@@ -66,31 +64,24 @@ static void	free_split(char **result, int index)
 
 static int	fill_words(char **result, const char *s, char c)
 {
-	const char	*start;
-	size_t		len;
-	int			index;
+	int index = 0;
+	int i = 0;
 
-	index = 0;
-	while (*s)
+	while (s[i])
 	{
-		while (*s == c)
-			s++;
-		if (*s)
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i])
 		{
-			start = s;
-			len = 0;
-			while (*s && *s != c)
+			int start = i;
+			while (s[i] && s[i] != c)
+				i++;
+			int len = i - start;
+			if (!(result[index++] = copy_word(s, start, len)))
 			{
-				len++;
-				s++;
-			}
-			result[index] = copy_word(start, len);
-			if (!result[index])
-			{
-				free_split(result, index);
+				free_split(result, index - 1);
 				return (-1);
 			}
-			index++;
 		}
 	}
 	return (0);
@@ -114,16 +105,16 @@ char	**ft_split(char const *s, char c)
 }
 // int main()
 // {
-//     char tab[] = "lorem ipsum dolor sit amet";
-//     char c = ' ';
-//     char **words = ft_split(tab, c);
-//     int i = 0;
-//     while (words[i])
-//     {
-//         printf("%s\n", words[i]);
-//         free(words[i]);
-//         i++;
-//     }
-//     free(words);
-//     return 0;
+// 	char tab[] = "lorem ipsum dolor sit amet";
+// 	char c = ' ';
+// 	char **words = ft_split(tab, c);
+// 	int i = 0;
+// 	while (words[i])
+// 	{
+// 	printf("%s\n", words[i]);
+// 	free(words[i]);
+// 	i++;
+// 	}
+// 	free(words);
+// 	return 0;
 // }

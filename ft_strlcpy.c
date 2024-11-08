@@ -38,7 +38,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 //     char *src = "ikram";
 //     char dest[2];
 //     size_t size = 0;
-
 //     printf("%zu\n", ft_strlcpy(dest, src, 6));
 //     // printf("%zu\n", strlcpy(dest, src, 6));
 //     printf("%s", dest);

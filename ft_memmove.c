@@ -40,6 +40,7 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 //     int d[] = {};
 //     int s[] = {1, 2, 3, 4, 5};
 //     ft_memmove(d, s, 3 *sizeof(int));
+
 //     for(int i = 0; i < 3; i++)
 //     {
 //         printf("%d", d[i]);

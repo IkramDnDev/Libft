@@ -29,7 +29,6 @@ int main() {
     t_list *head = ft_lstnew("Premier");
     ft_lstadd_front(&head, ft_lstnew("Deuxième"));
     ft_lstadd_front(&head, ft_lstnew("Troisième"));
-
     int size = ft_lstsize(head);
     printf("Taille de la liste: %d\n", size); // Devrait afficher 3
 

@@ -26,7 +26,6 @@ char	*ft_strchr(const char *s, int c)
 // {
 // 	char str[] = "ikram";
 // 	char c = '\0';
-
 // 	printf("%s", strchr(str, c));
 // 	printf("%s", ft_strchr(str, c));
 // }

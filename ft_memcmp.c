@@ -33,5 +33,4 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 //     char p1[] = "ikram";
 //     char p2[] = "ikd";
 //     printf("%d", ft_memcmp(p1, p2, 4));
-
 // }

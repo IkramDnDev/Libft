@@ -25,34 +25,24 @@ static int	ft_exist(const char *str, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*newstr;
-	size_t	start;
+	size_t	start = 0;
 	size_t	end;
-	size_t	i;
+	size_t	i = 0;
+	char	*newstr;
 
 	if (!s1 || !set)
-	{
-		return (0);
-	}
-	start = 0;
-	end = 0;
-	i = 0;
-	while (*s1 && ft_exist(set, s1[start]))
+		return (NULL);
+	while (s1[start] && ft_exist(set, s1[start]))
 		start++;
-	end = start;
-	while (s1[end])
-		end++;
+	end = ft_strlen(s1);
 	while (end > start && ft_exist(set, s1[end - 1]))
 		end--;
 	newstr = (char *)malloc((end - start + 1) * sizeof(char));
 	if (!newstr)
-		return (0);
-	while (i < end - start)
-	{
-		newstr[i] = s1[i + start];
-		i++;
-	}
-	newstr[end - start] = '\0';
+		return (NULL);
+	while (start < end)
+		newstr[i++] = s1[start++];
+	newstr[i] = '\0';
 	return (newstr);
 }
 // int main()
