@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:45 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 18:15:43 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/08 16:03:43 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,36 +17,40 @@ static void	ft_putchar(char c, int fd)
 	write(fd, &c, 1);
 }
 
+static void	ft_positif(long n, int fd)
+{
+	if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else if (n <= 9)
+	{
+		n += 48;
+		ft_putchar(n, fd);
+	}
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n >= INT_MIN && n <= INT_MAX)
+	long	nb;
+
+	nb = n;
+	if (fd < 0)
+		return ;
+	if (nb >= INT_MIN && nb <= INT_MAX)
 	{
-		if (n < 0)
+		if (nb < 0)
 		{
-			if (n == INT_MIN)
-				write(fd, "-2147483648", 11);
-			else
-			{
-				ft_putchar('-', fd);
-				n = -n;
-				ft_putnbr_fd(n, fd);
-			}
+			ft_putchar('-', fd);
+			nb = -nb;
 		}
-		else if (n > 9)
-		{
-			ft_putnbr_fd(n / 10, fd);
-			ft_putnbr_fd(n % 10, fd);
-		}
-		else if (n <= 9)
-		{
-			n += 48;
-			ft_putchar(n, fd);
-		}
+		ft_positif(nb, fd);
 	}
 }
 // int main()
 // {
-//     int fd = open("ikram.txt", O_WRONLY, 0644);
-//     ft_putnbr_fd(-123456688, fd);
+//     int fd = open("ikram.txt", O_CREAT | O_WRONLY, 0644);
+//     ft_putnbr_fd(-2147483648, fd);
 //     close(fd);
 // }

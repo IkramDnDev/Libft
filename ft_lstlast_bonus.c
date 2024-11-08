@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:28:15 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 21:47:18 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/08 16:20:35 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,17 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
-/*
-int main() {
-    t_list *head = ft_lstnew("Premier");
-    ft_lstadd_front(&head, ft_lstnew("Deuxième"));
-    ft_lstadd_front(&head, ft_lstnew("Troisième"));
+// int main() {
+//     t_list *head = ft_lstnew("Premier");
+//     ft_lstadd_front(&head, ft_lstnew("Deuxième"));
+//     ft_lstadd_front(&head, ft_lstnew("Troisième"));
 
-    t_list *last = ft_lstlast(head);
-    if (last != NULL) {
-        printf("Dernier élément: %s\n", (char *)last->content);
-    } else {
-        printf("La liste est vide.\n");
-    }
+//     t_list *last = ft_lstlast(head);
+//     if (last != NULL) {
+//         printf("Dernier élément: %s\n", (char *)last->content);
+//     } else {
+//         printf("La liste est vide.\n");
+//     }
 
-    return 0;
-}*/
+//     return 0;
+// }

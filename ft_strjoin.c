@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:21 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 18:32:32 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/08 15:25:57 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,20 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (0);
+	if (!s1)
+		return (ft_strdup(""));
+	if (!s2)
+		return (ft_strdup(""));
 	total_len = ft_strlen(s1) + ft_strlen(s2);
 	total_str = (char *)malloc(total_len + 1);
 	if (!total_str)
 		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
+	i = -1;
+	while (s1[++i])
 		total_str[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j])
-	{
+	j = -1;
+	while (s2[++j])
 		total_str[i + j] = s2[j];
-		j++;
-	}
 	total_str[i + j] = '\0';
 	return (total_str);
 }
