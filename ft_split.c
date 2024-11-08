@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:55 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 18:54:10 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/08 15:02:32 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	count_word(const char *s, char c)
 static char	*copy_word(const char *s, int start, int len)
 {
 	char	*word;
-	int	i;
+	int		i;
 
 	i = 0;
 	word = (char *)malloc((len + 1) * sizeof(char));
@@ -64,14 +64,12 @@ static void	free_split(char **result, int index)
 	free(result);
 }
 
-static int	fill_words(char **result, const char *s, char c)
+static int	fill_words(char **result, const char *s, char c, int index)
 {
-	int	index;
-	int	i;
 	int	start;
 	int	len;
+	int	i;
 
-	index = 0;
 	i = 0;
 	while (s[i])
 	{
@@ -83,11 +81,13 @@ static int	fill_words(char **result, const char *s, char c)
 			while (s[i] && s[i] != c)
 				i++;
 			len = i - start;
-			if (!(result[index++] == copy_word(s, start, len)))
+			result[index] = copy_word(s, start, len);
+			if (!result[index])
 			{
 				free_split(result, index - 1);
 				return (-1);
 			}
+			index++;
 		}
 	}
 	return (0);
@@ -97,14 +97,16 @@ char	**ft_split(char const *s, char c)
 {
 	int		word_count;
 	char	**result;
+	int		index;
 
+	index = 0;
 	if (!s)
 		return (NULL);
 	word_count = count_word(s, c);
 	result = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	if (fill_words(result, s, c) == -1)
+	if (fill_words(result, s, c, index) == -1)
 		return (NULL);
 	result[word_count] = NULL;
 	return (result);
