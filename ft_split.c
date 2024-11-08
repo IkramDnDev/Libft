@@ -35,9 +35,11 @@ static int	count_word(const char *s, char c)
 
 static char	*copy_word(const char *s, int start, int len)
 {
-	char	*word = (char *)malloc((len + 1) * sizeof(char));
-	int		i = 0;
+	char	*word;
+	int	i;
 
+	i = 0;
+	word = (char *)malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	while (i < len)
@@ -64,20 +66,24 @@ static void	free_split(char **result, int index)
 
 static int	fill_words(char **result, const char *s, char c)
 {
-	int index = 0;
-	int i = 0;
+	int	index;
+	int	i;
+	int	start;
+	int	len;
 
+	index = 0;
+	i = 0;
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
 			i++;
 		if (s[i])
 		{
-			int start = i;
+			start = i;
 			while (s[i] && s[i] != c)
 				i++;
-			int len = i - start;
-			if (!(result[index++] = copy_word(s, start, len)))
+			len = i - start;
+			if (!(result[index++] == copy_word(s, start, len)))
 			{
 				free_split(result, index - 1);
 				return (-1);

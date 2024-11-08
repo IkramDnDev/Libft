@@ -25,11 +25,13 @@ static int	ft_exist(const char *str, char c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	start = 0;
+	size_t	start;
 	size_t	end;
-	size_t	i = 0;
+	size_t	i;
 	char	*newstr;
 
+	start = 0;
+	i = 0;
 	if (!s1 || !set)
 		return (NULL);
 	while (s1[start] && ft_exist(set, s1[start]))
