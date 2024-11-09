@@ -6,7 +6,7 @@
 #    By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 21:29:32 by idahhan           #+#    #+#              #
-#    Updated: 2024/11/08 16:09:57 by idahhan          ###   ########.fr        #
+#    Updated: 2024/11/09 21:28:39 by idahhan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,10 +33,10 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@

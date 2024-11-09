@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:07 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/06 16:23:30 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/09 12:43:24 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,13 @@ int	ft_memcmp(const void *ptr1, const void *ptr2, size_t n)
 }
 // int main()
 // {
-//     char p1[] = "ikram";
-//     char p2[] = "ikd";
-//     printf("%d", ft_memcmp(p1, p2, 4));
+//     // int x = 25479;
+// 	// //  0|0|01100011|10000111 => 25479
+// 	// //  0|0|00000000|00011001 => 25
+//     // int y = 25;
+//     // printf("%d", ft_memcmp(&x, &y, 4));
+
+// 	int a[] = {0xFF, 0xFF, 0xFF};
+// 	int b[] = {0xFF, 0x00};
+// 	printf("%d\n", ft_memcmp(a, b, 5));
 // }

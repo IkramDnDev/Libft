@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 21:29:09 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/08 15:27:25 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:30:28 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int		ft_atoi(const char *str);
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *str, int c);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);

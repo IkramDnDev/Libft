@@ -6,13 +6,13 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:07 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 18:36:27 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/09 16:32:29 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*copy;
 	size_t	len;
