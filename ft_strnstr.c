@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:31:59 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 19:02:24 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:16 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,3 @@ char	*ft_strnstr(const char *str, const char *subs, size_t n)
 	}
 	return (NULL);
 }
-// int main() {
-//     char *str = "lorem ipsum dolor sit amet";
-//     char *subs = "ipsum";
-//     char *result = ft_strnstr(str, subs, 15);
-//     printf("%s\n", result);
-//     return 0;
-// }

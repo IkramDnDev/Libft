@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:32:17 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/08 15:21:29 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:07 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	c[i] = '\0';
 	return (c);
 }
-// int main()
-// {
-//     char s[] = "ikram";
-//     printf("---> %s\n",ft_substr(s, 0, 4));
-//     printf("---> %s\n",ft_substr(s, 4, 4));
-//     printf("---> %s\n",ft_substr(s, 8, 5));
-//     printf("---> %s\n",ft_substr(s, 0, 0));
-// }

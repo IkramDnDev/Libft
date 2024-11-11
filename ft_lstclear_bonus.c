@@ -6,40 +6,25 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:28:00 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 21:42:21 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:51:30 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//void del(void *content)
-//{
-//    free(content); 
-//}
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*current;
-	t_list	*next;
+	t_list	*debut;
+	t_list	*temp;
 
 	while (!lst || !del)
 		return ;
-	current = *lst;
-	while (current)
+	debut = *lst;
+	while (debut)
 	{
-		next = current -> next;
-		del(current -> content);
-		free(current);
-		current = next;
+		temp = debut;
+		debut = debut -> next;
+		ft_lstdelone(temp, del);
 	}
 	*lst = NULL;
 }
-// int main()
-// {
-//     t_list *head = ft_lstnew(malloc(sizeof(int)));
-//     t_list *second = ft_lstnew(malloc(sizeof(int)));
-//     ft_lstadd_back(&head, second);
-
-//     ft_lstclear(&head, del);
-//     return 0;
-// }

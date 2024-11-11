@@ -12,11 +12,6 @@
 
 #include "libft.h"
 
-/*
-char modify_char(unsigned int index, char c) {
-    return c + index;
-}*/
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	len;
@@ -40,13 +35,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
-/*
-int main() {
-    char *str = "hello";
-    char *result = ft_strmapi(str, modify_char);
-    if (result) {
-        printf("%s\n", result); // Affiche "hfnos" en fonction de l'exemple
-        free(result);
-    }
-    return 0;
-}*/

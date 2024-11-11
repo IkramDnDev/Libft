@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:07 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/09 16:32:29 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:42 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,3 @@ char	*ft_strdup(const char *src)
 	*ptr = '\0';
 	return (copy);
 }
-// int main ()
-// {
-//     char *src = "ikramabcderfgh";
-//     printf("%s", ft_strdup(src));
-// }

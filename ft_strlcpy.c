@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:45 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 18:26:04 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:25 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (src_len);
 }
-// int main()
-// {
-//     char *src = "ikram";
-//     char dest[2];
-//     size_t size = 0;
-//     printf("%zu\n", ft_strlcpy(dest, src, 6));
-//     // printf("%zu\n", strlcpy(dest, src, 6));
-//     printf("%s", dest);
-// }

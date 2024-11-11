@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:32:23 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 17:35:11 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:04 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-// int main()
-// {
-//     char c  = 'A';
-//     printf("%c", ft_tolower(c));
-
-// }

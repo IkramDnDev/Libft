@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:21 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/09 18:40:38 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:30 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	total_str[i + j] = '\0';
 	return (total_str);
 }
-// int main()
-// {
-//     char s1[] = "ikram";
-//     char s2[] = "dahhan";
-//     printf("%s", ft_strjoin(s1, s2));
-// }

@@ -64,11 +64,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-// int main() {
-//     printf("%s\n", ft_itoa(-2945));
-//     printf("%s\n", ft_itoa(0));
-//     printf("%s\n", ft_itoa(12345));
-//     printf("%s\n", ft_itoa(INT_MIN));
-//     printf("%s\n", ft_itoa(INT_MAX));
-//     return 0;
-// }

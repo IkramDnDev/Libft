@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:26:53 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/09 14:46:48 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:51:49 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,3 @@ void	*ft_bzero(void *s, size_t n)
 	}
 	return (s);
 }
-// int main()
-// {
-//     int x = 435;
-// 	ft_bzero(&x, sizeof(x));
-// 	printf("%d", x);
-// }

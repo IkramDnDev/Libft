@@ -12,10 +12,6 @@
 
 #include "libft.h"
 
-// void to_upper_inplace(unsigned int i, char *c) {
-//     if (i % 2 == 0)
-//         *c = toupper(*c);
-// }
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
@@ -30,9 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		}
 	}
 }
-// int main() {
-//     char str[] = "hello";
-//     ft_striteri(str, to_upper_inplace);
-//     printf("%s\n", str);
-//     return 0;
-// }

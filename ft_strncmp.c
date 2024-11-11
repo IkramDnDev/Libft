@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:31:50 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 18:18:14 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:18 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,3 @@ int	ft_strncmp(const char *str1, const char *str2, int n)
 		return (0);
 	return ((unsigned char)*str1 - (unsigned char)*str2);
 }
-// int main()
-// {
-//     char *str1 = "1234";
-//     char *str2 = "1235";
-
-//     printf("%d\n", ft_strncmp(str1, str2, -1));
-//     printf("%d", strncmp(str1, str2, -1));
-// }

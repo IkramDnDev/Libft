@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:05:22 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 22:06:41 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:51:52 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-// int main()
-// {            
-//     printf("%d\n", ft_atoi("21474836489999999999999999999"));
-//     printf("%d\n", atoi("214748364899999999999999999999"));
-//     // printf("%d\n", ft_atoi("   -123"));
-//     // printf("%d\n", ft_atoi("+42"));
-//     // printf("%d\n", ft_atoi("   +0"));
-//     return 0;
-// }

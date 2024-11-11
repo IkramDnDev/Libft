@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:32:12 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/07 19:08:31 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:54:06 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstr[i] = '\0';
 	return (newstr);
 }
-// int main()
-// {
-//     char s1[] = "$,h-llo$-";
-//     char set[] = "$-,";
-//     char *newst = ft_strtrim(s1, set);
-//     printf("%s", newst);
-// }

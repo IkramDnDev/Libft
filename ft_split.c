@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:55 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/09 16:13:31 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:50:51 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,16 +111,3 @@ char	**ft_split(char const *s, char c)
 	result[word_count] = NULL;
 	return (result);
 }
-// int main()
-// {
-// 	char s[] = "";
-// 	char c = '*';
-
-// 	char **words = ft_split(s, c);
-// 	int i = 0;
-// 	while(words[i])
-// 	{
-// 		printf("%s\n", words[i]);
-// 		i++;
-// 	}
-// }

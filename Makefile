@@ -6,7 +6,7 @@
 #    By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 21:29:32 by idahhan           #+#    #+#              #
-#    Updated: 2024/11/09 21:28:39 by idahhan          ###   ########.fr        #
+#    Updated: 2024/11/11 09:55:08 by idahhan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,12 +21,10 @@ SRCS = ft_strlen.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprin
 		ft_putstr_fd.c ft_split.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c \
 		ft_strncmp.c ft_strnstr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c 
 
-BSRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
+BSRCS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(BSRCS:.c=.o)
-
-TEST = test_program
 
 HEADER = libft.h
 
@@ -39,11 +37,7 @@ bonus: $(OBJS) $(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 %.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
-
-test: $(NAME)
-	$(CC) $(CFLAGS) main.c -L. -lft -o $(TEST)
-	./$(TEST)
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 clean:
 	rm -f $(OBJS) $(TEST)

@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:19 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/09 12:51:23 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/11 09:51:06 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 	}
 	return (dest);
 }
-// int main()
-// {
-//     int d[] = {};
-//     int s[] = {1, 2, 3, 4, 5};
-//     ft_memmove(d, s, 3 *sizeof(int));
-
-//     for(int i = 0; i < 3; i++)
-//     {
-//         printf("%d", d[i]);
-//     }
-// }
