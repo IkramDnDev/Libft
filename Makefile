@@ -6,7 +6,7 @@
 #    By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 21:29:32 by idahhan           #+#    #+#              #
-#    Updated: 2024/11/11 12:54:37 by idahhan          ###   ########.fr        #
+#    Updated: 2024/11/14 21:42:24 by idahhan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,5 +48,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re
+.PHONY: clean
 

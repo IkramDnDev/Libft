@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 21:29:09 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/13 09:04:48 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/14 21:39:07 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-int		ft_strncmp(const char *str1, const char *str2, int n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
 int		ft_lstsize(t_list *lst);
 int		ft_memcmp(const void *ptr1, const void *ptr2, size_t n);
 int		ft_atoi(const char *str);
