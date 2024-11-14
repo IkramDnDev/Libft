@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:28:00 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/11 09:51:30 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/12 21:04:42 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*debut;
 	t_list	*temp;
 
-	while (!lst || !del)
+	if (!lst || !del)
 		return ;
 	debut = *lst;
 	while (debut)

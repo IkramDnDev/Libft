@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	count_digits(int n)
+static size_t	count_digits(int n)
 {
 	size_t	len;
 
@@ -27,7 +27,7 @@ size_t	count_digits(int n)
 	return (len);
 }
 
-int	ft_check(int n, char *str)
+static int	ft_check(int n, char *str)
 {
 	if (n < 0)
 	{

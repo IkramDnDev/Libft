@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:21 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/11 09:50:30 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/12 21:57:09 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*total_str;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (0);
 	if (!s1)
 		return (ft_strdup(s2));

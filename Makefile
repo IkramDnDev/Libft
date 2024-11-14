@@ -6,7 +6,7 @@
 #    By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/07 21:29:32 by idahhan           #+#    #+#              #
-#    Updated: 2024/11/11 09:55:08 by idahhan          ###   ########.fr        #
+#    Updated: 2024/11/11 12:54:37 by idahhan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,15 +33,15 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(OBJS) $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+bonus: $(OBJS_BONUS)
+	ar rcs $(NAME) $(OBJS_BONUS)
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@ 
 
 clean:
-	rm -f $(OBJS) $(TEST)
-	rm -f $(OBJS_BONUS) $(TEST)
+	rm -f $(OBJS)
+	rm -f $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)

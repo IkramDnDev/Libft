@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:30:07 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/11 09:50:42 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/14 12:59:16 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ char	*ft_strdup(const char *src)
 	if (!copy)
 		return (NULL);
 	ptr = copy;
-	if (copy == NULL)
-		return (NULL);
 	while (*src)
 	{
 		*ptr++ = *src++;

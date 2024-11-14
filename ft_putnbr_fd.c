@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:29:45 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/11 09:50:57 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/12 21:36:49 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
 
-	nb = n;
 	if (fd < 0)
 		return ;
+	nb = n;
 	if (nb >= INT_MIN && nb <= INT_MAX)
 	{
 		if (nb < 0)
