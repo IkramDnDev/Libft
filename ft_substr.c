@@ -6,7 +6,7 @@
 /*   By: idahhan <idahhan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:32:17 by idahhan           #+#    #+#             */
-/*   Updated: 2024/11/11 09:50:07 by idahhan          ###   ########.fr       */
+/*   Updated: 2024/11/15 14:52:29 by idahhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	s_len = ft_strlen(s);
 	if (!s)
 		return (0);
+	s_len = ft_strlen(s);
 	if (start >= s_len || len == 0)
 		return (ft_strdup(""));
 	if (len > s_len - start)
